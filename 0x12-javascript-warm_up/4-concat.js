@@ -1,3 +1,3 @@
 #!/usr/bin/node
 
-console.log(`${process.env[2]} is ${process.env[3]}`);
+console.log(`${process.argv[2]} is ${process.argv[3]}`);
