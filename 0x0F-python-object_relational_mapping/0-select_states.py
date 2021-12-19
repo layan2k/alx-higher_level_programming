@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """script that lists table(states)
 Script should take 3 arguments: mysql username,
 mysql password and database name"""
@@ -21,4 +22,3 @@ if __name__ == '__main__':
         print(i)
     cursor.close()
     db.close()
-

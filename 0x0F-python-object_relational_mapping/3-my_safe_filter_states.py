@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """  a script that takes in arguments and displays
  all values in the states table of hbtn_0e_0_usa
  where name matches the argument.
@@ -27,4 +28,3 @@ if __name__ == '__main__':
         print(i)
     cursor.close()
     db.close()
-

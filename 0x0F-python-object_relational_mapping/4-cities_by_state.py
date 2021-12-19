@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """script that lists all cities from the database
 Script should take 3 arguments: mysql username, mysql password
  ,database name and state name searched"""
@@ -25,4 +26,3 @@ if __name__ == '__main__':
         print(i)
     cursor.close()
     db.close()
-
