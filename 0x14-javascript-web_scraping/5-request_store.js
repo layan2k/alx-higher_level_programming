@@ -5,7 +5,7 @@ let filename = process.argv[3];
 const fs = require('fs');
 const request = require('request');
 
-request(url, (err, response, body) => {
+request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
