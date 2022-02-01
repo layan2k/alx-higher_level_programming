@@ -2,18 +2,17 @@
 
 const request = require('request');
 const film = process.argv[2];
-let url = 'https://swapi-api.hbtn.io/api/people';
+const url = 'https://swapi-api.hbtn.io/api/people';
 
-
- const filmcharacters = (film, url) => {
+const filmcharacters = (film, url) => {
   request(url, (err, response, body) => {
     if (err) {
       console.log(err);
     } else if (response.statusCode === 200) {
-      let jsonobj = JSON.parse(body);
-      let people = jsonobj.results;
-      for (let i in people) {
-        for (let j in people[i].films) {
+      const jsonobj = JSON.parse(body);
+      const people = jsonobj.results;
+      for (const i in people) {
+        for (const j in people[i].films) {
           if (people[i].films[j].includes(film)) {
             console.log(people[i].name);
           }
@@ -26,5 +25,5 @@ let url = 'https://swapi-api.hbtn.io/api/people';
       console.log('An error occured. Status code: ' + response.statusCode);
     }
   });
-}
+};
 filmcharacters(film, url);
